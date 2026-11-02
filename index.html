@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Учебное портфолио: селекторы, эффекты и анимации jQuery.">
+  <title>Моё портфолио — Assignment 6</title>
+  <link rel="icon" href="images/code.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <!-- Task 1. Замени имя, заголовок и представление своими данными. -->
+    <section id="profile">
+      <h1 id="greeting">Welcome to My Portfolio</h1>
+      <h2>Saken Zhadiger</h2>
+      <p>SE-2538</p>
+      <p class="intro">Начинающий frontend-разработчик</p>
+      <p>Я изучаю веб-разработку и учусь создавать интерактивные сайты.</p>
+      <button type="button" id="lightTheme">Light Theme</button>
+      <button type="button" id="darkTheme">Dark Theme</button>
+    </section>
+
+    <!-- Task 2. Замени биографию и факты своими. -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Меня зовут Saken Zhadiger. Я учусь в группе SE-2538. Люблю снимать видео, смотреть аниме и играть в игры.</p>
+      <p id="status">Currently learning jQuery!</p>
+      <ul>
+        <li>Люблю снимать видео.</li>
+        <li>Я фанат аниме.</li>
+        <li>В свободное время играю в игры.</li>
+      </ul>
+      <button type="button" id="hideStatus">Hide</button>
+      <button type="button" id="showStatus">Show</button>
+      <button type="button" id="toggleStatus">Toggle</button>
+    </section>
+
+    <!-- Task 3. Две учебные иллюстрации можно заменить своими изображениями. -->
+    <section id="gallery">
+      <h2>My Gallery</h2>
+      <p>Веб-разработка и музыка</p>
+      <img class="galleryImage" src="images/code.svg" width="640" height="420"
+           alt="Учебная иллюстрация: окно редактора кода">
+      <img class="galleryImage" src="images/music.svg" width="640" height="420"
+           alt="Учебная иллюстрация: музыка и наушники">
+      <div>
+        <button type="button" id="fadeInImages">Fade In</button>
+        <button type="button" id="fadeOutImages">Fade Out</button>
+        <button type="button" id="fadeToggleImages">Fade Toggle</button>
+      </div>
+    </section>
+
+    <!-- Task 4. У каждой кнопки своя панель. -->
+    <section id="interests">
+      <h2>My Interests</h2>
+      <h3><button type="button" id="musicButton">My Favorite Music</button></h3>
+      <div id="musicPanel" class="panel">Мне нравится музыка Sheker.</div>
+      <h3><button type="button" id="movieButton">My Favorite Movie</button></h3>
+      <div id="moviePanel" class="panel">Мой любимый фильм — «Остров проклятых».</div>
+      <h3><button type="button" id="subjectButton">My Favorite Subject</button></h3>
+      <div id="subjectPanel" class="panel">Мой любимый предмет — математика.</div>
+      <button type="button" id="openPanels">Open All</button>
+      <button type="button" id="closePanels">Close All</button>
+    </section>
+
+    <!-- Task 5. Четыре исходных технических навыка. -->
+    <section id="skills">
+      <h2>My Skills</h2>
+      <ul id="skillsList">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Git</li>
+      </ul>
+      <label for="skillInput">New skill:</label>
+      <input type="text" id="skillInput" placeholder="Например, Python">
+      <div>
+        <button type="button" id="addSkill">Add Skill</button>
+        <button type="button" id="prependSkill">Prepend Skill</button>
+        <button type="button" id="removeSkill">Remove Skill</button>
+      </div>
+
+      <!-- Task 8. Примерные уровни: при изменении обнови и script.js. -->
+      <div id="skillLevels">
+        <h3>Skill Levels</h3>
+        <p>HTML — 80%</p>
+        <div class="skillTrack"><div id="htmlBar" class="skillBar"></div></div>
+        <p>CSS — 60%</p>
+        <div class="skillTrack"><div id="cssBar" class="skillBar"></div></div>
+        <p>JavaScript — 40%</p>
+        <div class="skillTrack"><div id="jsBar" class="skillBar"></div></div>
+        <button type="button" id="animateSkills">Animate My Skills</button>
+      </div>
+    </section>
+
+    <!-- Task 6. Профиль подключённого аккаунта GitHub. -->
+    <section id="links">
+      <h2>My Links</h2>
+      <a id="socialLink" href="https://github.com/bigstep832">My GitHub Profile</a>
+      <button type="button" id="changeLink">Change Link</button>
+    </section>
+
+    <!-- Task 7. Форма показывает ввод, но не отправляет его на сервер. -->
+    <section id="contact">
+      <h2>Contact Form</h2>
+      <form id="contactForm">
+        <div>
+          <label for="nameInput">Name:</label>
+          <input type="text" id="nameInput" autocomplete="name">
+        </div>
+        <div>
+          <label for="emailInput">Email:</label>
+          <input type="email" id="emailInput" autocomplete="email">
+        </div>
+      </form>
+      <div aria-live="polite">
+        <p>Name: <span id="namePreview"></span></p>
+        <p>Email: <span id="emailPreview"></span></p>
+      </div>
+    </section>
+  </main>
+  <footer>Assignment 6 · HTML, CSS &amp; jQuery</footer>
+  <!-- Task 0. Полная версия jQuery из CDN подключается раньше нашего кода. -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- Резервная копия: позволяет работать без доступа к CDN. -->
+  <script>
+    if (typeof jQuery === "undefined") {
+      document.write('<script src="vendor/jquery-3.7.1.min.js"><\/script>');
+    }
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

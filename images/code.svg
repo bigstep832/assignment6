@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="420" viewBox="0 0 640 420" role="img" aria-labelledby="title desc">
+  <title id="title">Веб-разработка</title>
+  <desc id="desc">Учебная иллюстрация: окно редактора с символами HTML и строками кода.</desc>
+  <rect width="640" height="420" rx="24" fill="#edf3ff"/>
+  <circle cx="565" cy="70" r="68" fill="#d9e6ff"/>
+  <circle cx="66" cy="359" r="83" fill="#d9e6ff"/>
+  <rect x="80" y="64" width="480" height="292" rx="18" fill="#183153"/>
+  <path d="M98 64h444a18 18 0 0 1 18 18v33H80V82a18 18 0 0 1 18-18Z" fill="#27466d"/>
+  <circle cx="106" cy="89" r="6" fill="#ff9087"/>
+  <circle cx="128" cy="89" r="6" fill="#ffd48b"/>
+  <circle cx="150" cy="89" r="6" fill="#9ad8b2"/>
+  <text x="320" y="95" fill="#c9daf1" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">index.html</text>
+  <path d="m205 158-39 34 39 34m230-68 39 34-39 34m-93-79-31 91" fill="none" stroke="#94bdff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="133" y="268" width="123" height="10" rx="5" fill="#7ea9e8"/>
+  <rect x="271" y="268" width="198" height="10" rx="5" fill="#49698f"/>
+  <rect x="133" y="294" width="72" height="10" rx="5" fill="#9ad8b2"/>
+  <rect x="220" y="294" width="140" height="10" rx="5" fill="#49698f"/>
+  <text x="320" y="391" fill="#183153" font-family="Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="3" text-anchor="middle">WEB DEVELOPMENT</text>
+</svg>
