@@ -1,8 +1,6 @@
 $(document).ready(function () {
-  // Task 0. Проверка подключения jQuery.
   console.log("jQuery is ready!");
 
-  // Task 1. Селектор тега, ID и класса.
   $("h1").css("font-size", "28px");
   $("#greeting").text("Добро пожаловать в моё портфолио!");
   $(".intro").css("font-size", "18px");
@@ -17,7 +15,6 @@ $(document).ready(function () {
     $("body").css("color", "white");
   });
 
-  // Task 2. Скрыть, показать, переключить статус.
   $("#hideStatus").on("click", function () {
     $("#status").hide();
   });
@@ -30,7 +27,6 @@ $(document).ready(function () {
     $("#status").toggle();
   });
 
-  // Task 3. Плавное появление и исчезновение фотографий.
   $("#fadeInImages").on("click", function () {
     $(".galleryImage").fadeIn(500);
   });
@@ -43,7 +39,6 @@ $(document).ready(function () {
     $(".galleryImage").fadeToggle(500);
   });
 
-  // Task 4. У каждой кнопки собственный обработчик.
   $("#musicButton").on("click", function () {
     $("#musicPanel").slideToggle(500);
   });
@@ -64,7 +59,6 @@ $(document).ready(function () {
     $(".panel").slideUp(500);
   });
 
-  // Task 5. Добавление в конец. trim() убирает пробелы по краям.
   $("#addSkill").on("click", function () {
     let skill = $("#skillInput").val().trim();
 
@@ -75,7 +69,6 @@ $(document).ready(function () {
     }
   });
 
-  // Добавление в начало. Пустой навык не добавляется.
   $("#prependSkill").on("click", function () {
     let skill = $("#skillInput").val().trim();
 
@@ -86,18 +79,15 @@ $(document).ready(function () {
     }
   });
 
-  // Удаление последнего пункта списка.
   $("#removeSkill").on("click", function () {
     $("#skillsList li").last().remove();
   });
 
-  // Task 6. Переход от профиля к списку репозиториев.
   $("#changeLink").on("click", function () {
     $("#socialLink").attr("href", "https://github.com/bigstep832?tab=repositories");
     $("#socialLink").text("My GitHub Repositories");
   });
 
-  // Task 7. val() читает поле, text() выводит обычный текст.
   $("#nameInput").on("input", function () {
     let name = $("#nameInput").val();
     $("#namePreview").text(name);
@@ -108,12 +98,10 @@ $(document).ready(function () {
     $("#emailPreview").text(email);
   });
 
-  // Для учебной формы отправка на сервер не нужна.
   $("#contactForm").on("submit", function (event) {
     event.preventDefault();
   });
 
-  // Task 8. false — полосы пустые; true — заполнены.
   let skillsVisible = false;
 
   $("#animateSkills").on("click", function () {
